@@ -182,7 +182,23 @@
                     <!--<div style="text-align:center;margin-bottom:10px;">
                     <a class="btn btn-success" href="https://dapp4u.biz">Go to DAPP4U</a>
                 </div>-->
-
+<div class="row">
+    <div class="col-md-12"> 
+        <div style="background: aquamarine;font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: red;
+        font-weight: bold;
+        padding: 4px 15px;
+        margin-bottom: 10px;
+        text-align: center;">
+      !! ATTENTION DEAR MEMBERS !! <BR/>
+Click on buy button only once, Kindly please confirm the transactions only once. <br/>
+After doing so just wait it will automatically redirect you to dashboard.<br/>
+Have some little patience, Instead of doing it faster.
+Doing faster may give loss only.<br/> 
+Team Dapp4U
+        </div>
+    </div>
+</div>
 
                     <div class="" style="margin-bottom:10px">
                         <div class="bg-info col-md-12" style="padding:10px 16px;font-size:15px;">
@@ -203,7 +219,7 @@
                                 <div class="card-body">
                                     <h3 class="level-price">5 MATIC</h3>
                                     
-                                    <button type="button" id="btnBuyLevel1" class="btn btn-block btn-primary btnBuyLevel">Buy</button>
+                                    <button type="button" style="display: none;" id="btnBuyLevel1" class="btn btn-block btn-primary btnBuyLevel">Buy</button>
     <button type="button" id="btnRestoreLevel1" class="btn btn-block btn-primary hide">Restore</button>
     <button type="button" id="btnExtendLevel1" class="btn btn-block btn-default btnExtendLevel hide">Extend</button>
                                 </div>
@@ -361,6 +377,13 @@
                 $("#tm-preloader").hide();
             }
             setTimeout(crlink, 2500);
+
+             $(document).ready(function () {
+                    $(".btnBuyLevel").click(function(){
+                        $(this).text("Please wait..");
+                        $(this).attr("disabled","disabled");
+                    })        
+            });
         </script>
 
     </div>
